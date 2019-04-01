@@ -152,6 +152,7 @@ def main():
     for i in range(len(data["AppSize"])):
         data["Time"][i] = (float(data["Time"][i]))
 
+    legend = ['stride-1','stride-16','stride-64']
     for i in range(len(data["AppSize"])/num_datapoints):
         srt_idx = i*num_datapoints
         end_idx = (i+1)*num_datapoints
@@ -161,6 +162,7 @@ def main():
             linestyle='--',
             marker='.'
             )
+        p1.legend(legend[i])
     
     p1.set_xscale('log')
     p1.set_yscale('log')
