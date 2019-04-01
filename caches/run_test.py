@@ -162,7 +162,6 @@ def main():
             linestyle='--',
             marker='.'
             )
-        p1.legend(legend[i])
     
     p1.set_xscale('log')
     p1.set_yscale('log')
