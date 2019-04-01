@@ -114,7 +114,6 @@ def main():
                 app_args_list.append(str(app_size) + " " \
                     + str(inputs["NumIterations"][0]) + " " +str(run_type))
 
-
     # 2. Execute the benchmark and write to the report file.
     if (not ccbench.NORUN):
         ccbench.runBenchmark(app_bin, app_args_list, inputs, input_variables, report_filename)
@@ -148,9 +147,11 @@ def main():
  
     # let's convert "appsizearg(#elm)" to "appsize(KB)"
     for i in range(len(data["AppSize"])):
-        data["AppSize"][i] = str(float(data["AppSize"][i]) * 4 / 1024)
+        data["AppSize"][i] = (float(data["AppSize"][i]) * 4 / 1024)
     
-    
+    for i in range(len(data["AppSize"])):
+        data["Time"][i] = (float(data["Time"][i]))
+
     for i in range(len(data["AppSize"])/num_datapoints):
         srt_idx = i*num_datapoints
         end_idx = (i+1)*num_datapoints
