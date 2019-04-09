@@ -40,8 +40,7 @@ addProcInfo("tilera",     "TilePro64 (Default malloc behavior) @ 700 MHz",      
 addProcInfo("tilera-l3",  "TilePro64 (using 'Hash-for-Home') @ 700 MHz",          8,   64,    4096,      -1)
 addProcInfo("tegra2",     "Tegra 2 (ARM Cortex-A9) Dual-core",                   32,  512,      -1,      -1)
 addProcInfo("r5large",     "Xeon Platinum 8000 (Skylake) @ 3.1GHz, 4 core", 32,  1*1024,  32*1024,      -1)
-
-
+addProcInfo("c4large",    "Intel(R) Xeon(R) CPU E5-2666 v3 @ 2.90GHz", 32, 256, 25600, -1)
 #helper functions
 
 def logMidPoint(low, high):
